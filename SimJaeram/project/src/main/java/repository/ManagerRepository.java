@@ -29,4 +29,7 @@ public class ManagerRepository {
         }
     }
 
+    public void logOut() {
+        // 관리자 로그아웃하기
+    }
 }
