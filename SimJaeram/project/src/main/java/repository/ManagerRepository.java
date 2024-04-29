@@ -17,4 +17,16 @@ public class ManagerRepository {
         }
     }
 
+    public void changePassword(String email, String password, String newPassword) {
+        // 만약 관리자가 입력한 비밀번호가 등록된 비밀번호와 같다면
+        if(manager.getEmail().equals(email) && manager.getPassword().equals(password)) {
+            // 비밀번호 변경
+            manager.setPassword(newPassword);
+        }
+        else {
+            // 비밀번호 변경하지 않고 종료
+            return;
+        }
+    }
+
 }
