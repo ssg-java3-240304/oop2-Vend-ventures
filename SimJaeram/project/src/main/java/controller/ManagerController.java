@@ -8,8 +8,12 @@ public class ManagerController {
     public void logIn(String email, String password) {
         managerRepository.logIn(email, password);
     }
-    
+
     public void changePassword(String email, String password, String newPassword) {
         managerRepository.changePassword(email, password, newPassword);
+    }
+
+    public void logOut() {
+        managerRepository.logOut();
     }
 }
