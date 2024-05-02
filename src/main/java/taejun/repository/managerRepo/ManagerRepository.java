@@ -7,22 +7,15 @@ import java.util.List;
 
 
 public class ManagerRepository {
-    private Manager manager;
-    private List<Manager> managers;
+    private Manager manager = new Manager("1","박태준", "1234" );
 
-    public ManagerRepository(Manager manager) {
-        this.manager = manager;
 
-    }
+
 
     public void save(String email, String name, String password) {
-        Manager newManager = new Manager(email, name, password);
-        if (manager == null) {
-            managers = new ArrayList<>();
-        }
-        managers.add(newManager);
-    }
+         manager = new Manager(email, name, password);
 
+    }
 
     public boolean login(String email, String password) {
         if (manager.getEmail().equals(email) && manager.getPassword().equals(password)) {
